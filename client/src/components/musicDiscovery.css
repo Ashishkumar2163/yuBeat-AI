@@ -1,0 +1,69 @@
+.music-discovery {
+  margin: 18px 0 20px;
+  padding: 18px;
+  border: 1px solid rgba(167, 139, 250, .22);
+  border-radius: 18px;
+  background: linear-gradient(145deg, rgba(139, 92, 246, .09), rgba(15, 17, 31, .55));
+  color: #f7f5ff;
+  min-width: 0;
+}
+.music-discovery-heading, .music-discovery-title, .music-discovery-tabs,
+.music-search-form, .music-results-meta, .music-result {
+  display: flex;
+  align-items: center;
+}
+.music-discovery-heading { justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.music-discovery-title { gap: 11px; min-width: 0; }
+.music-discovery-icon, .music-result-art {
+  display: grid; place-items: center; flex: 0 0 auto;
+  color: #c4b5fd; background: rgba(139, 92, 246, .15);
+  border: 1px solid rgba(167, 139, 250, .18);
+}
+.music-discovery-icon { width: 40px; height: 40px; border-radius: 12px; }
+.music-discovery-title h3 { margin: 0 0 4px; font-size: 15px; font-weight: 700; }
+.music-discovery-title p { margin: 0; color: #a9a7bb; font-size: 12px; line-height: 1.5; }
+.music-source-badge { flex: 0 0 auto; font-size: 9px; letter-spacing: .09em; color: #c4b5fd; border: 1px solid rgba(167,139,250,.25); border-radius: 999px; padding: 6px 8px; }
+.music-discovery-tabs { gap: 8px; margin-bottom: 12px; flex-wrap: wrap; }
+.music-discovery-tabs button {
+  display: inline-flex; align-items: center; gap: 7px; border-radius: 10px;
+  border: 1px solid #343247; padding: 9px 11px; color: #aaa8bd;
+  background: #151525; cursor: pointer; font: inherit; font-size: 12px;
+}
+.music-discovery-tabs button.active { color: #fff; border-color: #8b5cf6; background: rgba(124,58,237,.22); }
+.music-search-form { gap: 10px; padding: 6px 7px 6px 12px; border: 1px solid #39364d; border-radius: 12px; background: #0f1020; color: #a9a7bb; }
+.music-search-form:focus-within { border-color: #9b7bff; box-shadow: 0 0 0 3px rgba(139,92,246,.12); }
+.music-search-form input { width: 100%; min-width: 0; color: #fff; background: transparent; border: 0; outline: 0; font: inherit; font-size: 13px; }
+.music-search-form input::placeholder { color: #77758e; }
+.music-search-form button, .music-use-button {
+  display: inline-flex; justify-content: center; align-items: center; gap: 6px;
+  flex: 0 0 auto; border: 0; border-radius: 9px; color: #fff; cursor: pointer;
+  background: linear-gradient(110deg, #8b5cf6, #6941d4); padding: 9px 13px;
+  font: inherit; font-size: 12px; font-weight: 650;
+}
+.music-search-form button:disabled { opacity: .65; cursor: wait; }
+.music-results-meta { justify-content: space-between; gap: 8px; color: #9290a8; font-size: 10px; margin: 14px 1px 8px; }
+.music-results-list { display: grid; gap: 7px; }
+.music-result { gap: 11px; min-width: 0; padding: 9px; border: 1px solid #2b293d; border-radius: 12px; background: rgba(15,16,32,.72); }
+.music-result.selected { border-color: #8b5cf6; }
+.music-result-art { width: 46px; height: 46px; overflow: hidden; border-radius: 9px; }
+.music-result-art img { width: 100%; height: 100%; object-fit: cover; }
+.music-result-copy { display: grid; gap: 3px; flex: 1; min-width: 0; }
+.music-result-copy strong, .music-result-copy span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.music-result-copy strong { color: #f7f5ff; font-size: 12px; font-weight: 650; }
+.music-result-copy span { color: #b5b2c9; font-size: 11px; }
+.music-result-copy small { color: #77758e; font-size: 10px; }
+.music-use-button { padding: 8px 10px; }
+.music-discovery-message, .music-empty-state { padding: 12px; border-radius: 10px; margin-top: 10px; color: #bdb9d2; background: rgba(255,255,255,.035); font-size: 12px; line-height: 1.5; }
+.music-discovery-message.error { color: #fecaca; background: rgba(239,68,68,.09); border: 1px solid rgba(248,113,113,.2); }
+.music-discovery-footnote { margin: 12px 0 0; color: #77758e; font-size: 10px; line-height: 1.6; }
+.music-spin { animation: music-spin 1s linear infinite; }
+@keyframes music-spin { to { transform: rotate(360deg); } }
+@media (max-width: 560px) {
+  .music-discovery { padding: 13px; }
+  .music-discovery-heading { align-items: flex-start; }
+  .music-source-badge { font-size: 8px; }
+  .music-results-meta { align-items: flex-start; flex-direction: column; }
+  .music-result { flex-wrap: wrap; }
+  .music-result-copy { min-width: calc(100% - 70px); }
+  .music-use-button { margin-left: auto; }
+}
