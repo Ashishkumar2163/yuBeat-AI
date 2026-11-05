@@ -23,7 +23,7 @@ import {
   X,
 } from 'lucide-react'
 import './App.css'
-import MusicDiscovery from './components/MusicDiscovery'
+import MusicDiscovery from './components/musicDiscovery'
 import { getTrackStreamUrl } from './services/musicService'
 import { getProjects, saveProject, getProjectById, updateProject, deleteProject } from './services/projectServices'
 
