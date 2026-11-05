@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import { AudioLines, Globe2, LoaderCircle, Music2, Play, Search, TrendingUp } from 'lucide-react'
 import { getTrendingMusic, searchMusic } from '../services/musicService'
-import './MusicDiscovery.css'
+import './musicDiscovery.css'
 
 function formatDuration(seconds) {
   if (!Number.isFinite(seconds) || seconds <= 0) return '—'
